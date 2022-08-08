@@ -16,4 +16,7 @@ Background: Define URL
         When method GET
         Then status 200
         And match response.articles contains ['author', 'username']
+        And match response.articles == "#[10]"
+        And match response.articlesCount == 500
+
         
